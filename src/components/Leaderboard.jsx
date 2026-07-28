@@ -50,7 +50,6 @@ export default function Leaderboard({ models, categories, hasCost }) {
   const [sortKey, setSortKey] = useState(init.get("sort") || (initCats.length === 1 ? initCats[0] : "overall"));
   const [sortDir, setSortDir] = useState(init.get("dir") === "asc" ? 1 : -1);
   const [expanded, setExpanded] = useState(() => new Set());
-  const [showVariants, setShowVariants] = useState(false);
   const [onlyOpen, setOnlyOpen] = useState(false);
   const [q, setQ] = useState("");
   const [showOrg, setShowOrg] = useState(init.get("showorg") === "1");
@@ -107,7 +106,7 @@ export default function Leaderboard({ models, categories, hasCost }) {
       if (q && !m.name.toLowerCase().includes(q) && !m.model.toLowerCase().includes(q)) return false;
       return true;
     });
-    if (!showVariants) r = collapseVariants(r);
+    r = collapseVariants(r);
     return r.slice().sort((a, b) => {
       const va = sortVal(a, sortKey), vb = sortVal(b, sortKey);
       if (va == null) return 1;
@@ -116,7 +115,7 @@ export default function Leaderboard({ models, categories, hasCost }) {
       return (va - vb) * sortDir;
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [models, onlyOpen, orgFilter, q, showVariants, sortKey, sortDir, selectedCats]);
+  }, [models, onlyOpen, orgFilter, q, sortKey, sortDir, selectedCats]);
 
   const shades = computeShades(rows, scoreCols, val);
 
@@ -152,8 +151,6 @@ export default function Leaderboard({ models, categories, hasCost }) {
             onChange={(e) => setQ(e.target.value.toLowerCase())} />
         </div>
         <button className="lb-chip" aria-pressed={onlyOpen} onClick={() => setOnlyOpen((v) => !v)}>Open weights</button>
-        <button className="lb-chip" aria-pressed={showVariants} data-tip="Off = best variant per model · On = every effort variant"
-          onClick={() => setShowVariants((v) => !v)}>Model variants</button>
         <button className="lb-chip" aria-pressed={showOrg} data-tip="Show the organization column"
           onClick={() => setShowOrg((v) => !v)}>Show org</button>
         <select className="lb-org-select" value={orgFilter} onChange={(e) => setOrgFilter(e.target.value)} aria-label="Filter by organization">
