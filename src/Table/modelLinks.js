@@ -487,17 +487,12 @@ export const modelLinks = {
             { rawName: "claude-opus-4-7-xhigh-effort", displayName: "Claude 4.7 Opus Thinking xHigh Effort" }
         ]
     },
-    "claude-opus-4-8-xhigh-effort": {
+    "claude-opus-4-8-max-effort": {
         url: "https://www.anthropic.com/news/claude-opus-4-8",
         organization: "Anthropic",
-        displayName: "Claude 4.8 Opus Thinking xHigh Effort",
+        displayName: "Claude 4.8 Opus Thinking Max Effort",
         version: "2026-04-16",
-        reasoner: true,
-        variants: [
-            { rawName: "claude-opus-4-8-low-effort", displayName: "Claude 4.8 Opus Thinking Low Effort" },
-            { rawName: "claude-opus-4-8-medium-effort", displayName: "Claude 4.8 Opus Thinking Medium Effort" },
-            { rawName: "claude-opus-4-8-high-effort", displayName: "Claude 4.8 Opus Thinking High Effort" }
-        ]
+        reasoner: true
     },
     "claude-fable-5-max-effort": {
         url: "https://www.anthropic.com/news/claude-fable-5",
