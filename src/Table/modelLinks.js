@@ -567,6 +567,13 @@ export const modelLinks = {
             { rawName: "claude-opus-5-high-effort", displayName: "Claude 5 Opus Thinking High Effort" },
             { rawName: "claude-opus-5-max-effort", displayName: "Claude 5 Opus Thinking Max Effort" }
         ]
+    },
+    "deepseek-v4-flash-0731": {
+        url: "https://api-docs.deepseek.com/quick_start/pricing/",
+        organization: "DeepSeek",
+        displayName: "DeepSeek V4 Flash 0731",
+        openweight: true,
+        reasoner: true
     }
 };
 
