@@ -86,12 +86,25 @@ def _overall_score(score):
 
 def load_price(model):
     """(input, cached, output, cache_write) USD/1M from the LiveBench config, or None.
-    Missing cached / cache_write default to the standard 0.1x / 1.25x of input."""
+
+    A MISSING cached_input is guessed at 0.1x input and WARNED about loudly, because the
+    guess is frequently wrong by a large factor and silently distorts the cost column:
+    agentic answers replay their whole context every turn, so cache reads are ~95-98% of all
+    input tokens and the cached rate dominates the row. Real spread among providers:
+    kimi-k3 0.100x, qwen3.8-max 0.125x, glm-5.2 0.186x (published $0.26 on $1.40),
+    deepseek-v4-flash 0.020x. Guessing 0.1x for glm-5.2 understates its agentic cost ~4x.
+    Fix the model config instead of relying on this default.
+    """
     try:
         from livebench.model import get_model_config
         cpm = getattr(get_model_config(model), 'cost_per_million', None)
         if cpm:
             ip = float(cpm.get('input', 0)); op = float(cpm.get('output', 0))
+            if 'cached_input' not in cpm:
+                print(f"WARNING: {model} config has no `cached_input`; guessing 0.1x input "
+                      f"(${ip * 0.1:.4f}/1M). Cache reads dominate agentic cost — verify the "
+                      f"provider's published cached rate and add it to the model config.",
+                      file=sys.stderr)
             return ip, float(cpm.get('cached_input', ip * 0.1)), op, float(cpm.get('cache_creation', ip * 1.25))
     except Exception:
         pass
@@ -228,6 +241,10 @@ def main():
     if args.input_price is not None and args.output_price is not None:
         in_price, out_price = args.input_price, args.output_price
         cached_price, cache_write_price = in_price * 0.1, in_price * 1.25
+        print(f"WARNING: --input-price/--output-price given, so cached is GUESSED at 0.1x "
+              f"(${cached_price:.4f}/1M) and the model config's real cached_input is ignored. "
+              f"Cache reads are ~95%+ of agentic input tokens, so prefer running where "
+              f"`from livebench.model import get_model_config` works.", file=sys.stderr)
     else:
         cfg = load_price(args.model)
         if cfg is None:
