@@ -574,6 +574,12 @@ export const modelLinks = {
         displayName: "DeepSeek V4 Flash 0731",
         openweight: true,
         reasoner: true
+    },
+    "qwen3.8-max": {
+        url: "https://qwen.ai/blog?id=qwen3.8",
+        organization: "Alibaba",
+        displayName: "Qwen 3.8 Max",
+        reasoner: true
     }
 };
 
