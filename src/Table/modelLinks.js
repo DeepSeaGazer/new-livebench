@@ -1,7 +1,7 @@
 export const modelLinks = {
-    "glm-5.2": { url: "https://z.ai", organization: "Z.AI", displayName: "GLM-5.2", openweight: true, reasoner: true },
-    "kimi-k2.7-code": { url: "https://moonshot.ai", organization: "Moonshot AI", displayName: "Kimi K2.7 Code", openweight: true, reasoner: true },
-    "arcee-trinity-large-preview": {url: "https://openrouter.ai/arcee-ai/trinity-large-preview:free", organization: "Arcee", displayName: "Trinity Large Preview", openweight: true, reasoner: true},
+    "glm-5.2": { url: "https://z.ai", organization: "Z.AI", displayName: "GLM-5.2", openweight: true, reasoner: true, huggingface: "https://huggingface.co/zai-org/GLM-5.2" },
+    "kimi-k2.7-code": { url: "https://moonshot.ai", organization: "Moonshot AI", displayName: "Kimi K2.7 Code", openweight: true, reasoner: true, huggingface: "https://huggingface.co/moonshotai/Kimi-K2.7-Code" },
+    "arcee-trinity-large-preview": {url: "https://openrouter.ai/arcee-ai/trinity-large-preview:free", organization: "Arcee", displayName: "Trinity Large Preview", openweight: true, reasoner: true, huggingface: "https://huggingface.co/arcee-ai/Trinity-Large-Preview"},
     "chatgpt-4o-latest": { url: "https://openai.com/index/hello-gpt-4o/", organization: "OpenAI", displayName: "ChatGPT-4o" },
     "chatgpt-4o-latest-0903": { url: "https://openai.com/index/hello-gpt-4o/", organization: "OpenAI", displayName: "ChatGPT-4o", version: "2024-09-03" },
     "chatgpt-4o-latest-2025-01-29": { url: "https://help.openai.com/en/articles/9624314-model-release-notes", organization: "OpenAI", displayName: "ChatGPT-4o", version: "2025-01-29" },
@@ -23,8 +23,8 @@ export const modelLinks = {
     "command-r-plus-08-2024": { url: "https://docs.cohere.com/docs/models", organization: "Cohere", displayName: "Command R Plus", version: "2024-08" },
     "deepseek-coder-v2": { url: "https://huggingface.co/deepseek-ai/DeepSeek-V2", organization: "DeepSeek", displayName: "DeepSeek Coder V2", openweight: true },
     "deepseek-v2.5": { url: "https://huggingface.co/deepseek-ai/DeepSeek-V2.5", organization: "DeepSeek", displayName: "DeepSeek V2.5", openweight: true },
-    "deepseek-v2.5-1210": { url: "https://api-docs.deepseek.com/news/news1210", organization: "DeepSeek", displayName: "DeepSeek V2.5", version: "2024-12-10", openweight: true },
-    "deepseek-v3": { url: "https://api-docs.deepseek.com/news/news1226", organization: "DeepSeek", displayName: "DeepSeek V3", openweight: true },
+    "deepseek-v2.5-1210": { url: "https://api-docs.deepseek.com/news/news1210", organization: "DeepSeek", displayName: "DeepSeek V2.5", version: "2024-12-10", openweight: true, huggingface: "https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210" },
+    "deepseek-v3": { url: "https://api-docs.deepseek.com/news/news1226", organization: "DeepSeek", displayName: "DeepSeek V3", openweight: true, huggingface: "https://huggingface.co/deepseek-ai/DeepSeek-V3" },
     "deepseek-r1": { url: "https://huggingface.co/deepseek-ai/DeepSeek-R1", organization: "DeepSeek", displayName: "DeepSeek R1", reasoner: true, openweight: true },
     "deepseek-r1-distill-qwen-32b": { url: "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B", organization: "DeepSeek", displayName: "DeepSeek R1 Distill Qwen 32B", reasoner: true, openweight: true },
     "deepseek-r1-distill-llama-70b": { url: "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B", organization: "DeepSeek", displayName: "DeepSeek R1 Distill Llama 70B", reasoner: true, openweight: true },
@@ -102,14 +102,14 @@ export const modelLinks = {
             { rawName: "gpt-5-nano-minimal", displayName: "GPT-5 Nano Minimal" }
         ]
     },
-    "gpt-oss-120b": { url: "https://openai.com/index/introducing-gpt-oss/", organization: "OpenAI", displayName: "GPT OSS 120b", version: "2025-08-05", reasoner: true, openweight: true },
+    "gpt-oss-120b": { url: "https://openai.com/index/introducing-gpt-oss/", organization: "OpenAI", displayName: "GPT OSS 120b", version: "2025-08-05", reasoner: true, openweight: true, huggingface: "https://huggingface.co/openai/gpt-oss-120b" },
     "grok-2": { url: "https://x.ai/blog/grok-2", organization: "xAI", displayName: "Grok 2" },
     "grok-2-mini": { url: "https://x.ai/blog/grok-2", organization: "xAI", displayName: "Grok 2 Mini"},
     "grok-2-1212": { url: "https://x.ai/blog/grok-1212", organization: "xAI", displayName: "Grok 2", version: "2024-12-12" },
-    "llama-3.1-nemotron-70b-instruct": { url: "https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct", organization: "NVIDIA", displayName: "Llama 3.1 Nemotron 70B Instruct", openweight: true },
-    "meta-llama-3.1-405b-instruct-turbo": { url: "https://www.together.ai/blog/meta-llama-3-1", organization: "Meta", displayName: "Llama 3.1 405B Instruct Turbo", openweight: true },
-    "meta-llama-3.1-70b-instruct-turbo": { url: "https://www.together.ai/blog/meta-llama-3-1", organization: "Meta", displayName: "Llama 3.1 70B Instruct Turbo", openweight: true  },
-    "meta-llama-3.1-8b-instruct-turbo": { url: "https://www.together.ai/blog/meta-llama-3-1", organization: "Meta", displayName: "Llama 3.1 8B Instruct Turbo", openweight: true  },
+    "llama-3.1-nemotron-70b-instruct": { url: "https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct", organization: "NVIDIA", displayName: "Llama 3.1 Nemotron 70B Instruct", openweight: true, huggingface: "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct" },
+    "meta-llama-3.1-405b-instruct-turbo": { url: "https://www.together.ai/blog/meta-llama-3-1", organization: "Meta", displayName: "Llama 3.1 405B Instruct Turbo", openweight: true, huggingface: "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct" },
+    "meta-llama-3.1-70b-instruct-turbo": { url: "https://www.together.ai/blog/meta-llama-3-1", organization: "Meta", displayName: "Llama 3.1 70B Instruct Turbo", openweight: true, huggingface: "https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct"  },
+    "meta-llama-3.1-8b-instruct-turbo": { url: "https://www.together.ai/blog/meta-llama-3-1", organization: "Meta", displayName: "Llama 3.1 8B Instruct Turbo", openweight: true, huggingface: "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"  },
     "llama-3.3-70b-instruct-turbo": { url: "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct", organization: "Meta", displayName: "Llama 3.3 70B Instruct Turbo", openweight: true  },
     "mistral-large-2407": { url: "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407", organization: "Mistral AI", displayName: "Mistral Large", version: "2024-07", openweight: true },
     "mistral-large-2411": { url: "https://huggingface.co/mistralai/Mistral-Large-Instruct-2411", organization: "Mistral AI", displayName: "Mistral Large", version: "2024-11", openweight: true },
@@ -162,7 +162,7 @@ export const modelLinks = {
     "amazon.nova-micro-v1:0": { url: "https://aws.amazon.com/ai/generative-ai/nova/", organization: "Amazon", displayName: "Nova Micro",  },
     "amazon.nova-pro-v1:0": { url: "https://aws.amazon.com/ai/generative-ai/nova/", organization: "Amazon", displayName: "Nova Pro",  },
     "qwq-32b-preview": { url: "https://huggingface.co/Qwen/QWQ-32B-Preview", organization: "Alibaba", displayName: "QwQ 32B Preview", reasoner: true, openweight: true },
-    "qwq-32b": { url: "https://qwenlm.github.io/blog/qwq-32b/", organization: "Alibaba", displayName: "QwQ 32B", reasoner: true, openweight: true},
+    "qwq-32b": { url: "https://qwenlm.github.io/blog/qwq-32b/", organization: "Alibaba", displayName: "QwQ 32B", reasoner: true, openweight: true, huggingface: "https://huggingface.co/Qwen/QwQ-32B"},
     "olmo-2-1124-13b-instruct": {url: "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct", organization: "AllenAI", displayName: "OLMo 2 13B Instruct", version: "2024-11-24", openweight: true},
     "learnlm-1.5-pro-experimental": {url: "https://ai.google.dev/gemini-api/docs/learnlm", organization: "Google", displayName: "LearnLM 1.5 Pro Experimental", },
     "grok-3-thinking": {url: "https://x.ai/blog/grok-3", organization: "xAI", displayName: "Grok 3 Thinking", reasoner: true},
@@ -173,9 +173,9 @@ export const modelLinks = {
     "gemini-2.0-flash-lite": {url: "https://developers.googleblog.com/en/start-building-with-the-gemini-2-0-flash-family/", organization: "Google", displayName: "Gemini 2.0 Flash Lite", version: "001"},
     "gemini-2.0-flash-lite-001": {url: "https://developers.googleblog.com/en/start-building-with-the-gemini-2-0-flash-family/", organization: "Google", displayName: "Gemini 2.0 Flash Lite", version: "001"},
     "mistral-small-2503": { url: "https://mistral.ai/news/mistral-small-3-1", organization: "Mistral AI", displayName: "Mistral Small", version: "2025-03"},
-    "gemma-3-27b-it": { url: "https://blog.google/technology/developers/gemma-3/", organization: "Google", displayName: "Gemma 3 27B", openweight: true },
-    "gemma-3-12b-it": { url: "https://blog.google/technology/developers/gemma-3/", organization: "Google", displayName: "Gemma 3 12B", openweight: true },
-    "gemma-3-4b-it": { url: "https://blog.google/technology/developers/gemma-3/", organization: "Google", displayName: "Gemma 3 4B", openweight: true },
+    "gemma-3-27b-it": { url: "https://blog.google/technology/developers/gemma-3/", organization: "Google", displayName: "Gemma 3 27B", openweight: true, huggingface: "https://huggingface.co/google/gemma-3-27b-it" },
+    "gemma-3-12b-it": { url: "https://blog.google/technology/developers/gemma-3/", organization: "Google", displayName: "Gemma 3 12B", openweight: true, huggingface: "https://huggingface.co/google/gemma-3-12b-it" },
+    "gemma-3-4b-it": { url: "https://blog.google/technology/developers/gemma-3/", organization: "Google", displayName: "Gemma 3 4B", openweight: true, huggingface: "https://huggingface.co/google/gemma-3-4b-it" },
     "perplexity-sonar": { url: "https://perplexity.ai/", organization: "Perplexity", displayName: "Perplexity Sonar" },
     "perplexity-sonar-pro": { url: "https://perplexity.ai/", organization: "Perplexity", displayName: "Perplexity Sonar Pro" },
     "deepseek-v3-0324": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324", organization: "DeepSeek", displayName: "DeepSeek V3 0324", version: "2025-03-24", openweight: true},
@@ -187,8 +187,8 @@ export const modelLinks = {
     "hunyuan-turbos-20250313": {url: "https://cloud.tencent.com/document/product/1729/104753", organization: "Tencent", displayName: "Hunyuan Turbos", version: "2025-03-13"},
     "azerogpt": {url: "https://azero.soundai.com/#/dashboard", organization: "SoundAI", displayName: "AzeroGPT" },
     "command-a-03-2025": {url: "https://cohere.com/blog/command-a", organization: "Cohere", displayName: "Command A", version: "2025-03"},
-    "llama-4-maverick-17b-128e-instruct": {url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/", organization: "Meta", displayName:"Llama 4 Maverick 17B 128E Instruct", openweight: true},
-    "llama4-maverick-instruct-basic": {url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/", organization: "Meta", displayName:"Llama 4 Maverick 17B 128E Instruct", openweight: true},
+    "llama-4-maverick-17b-128e-instruct": {url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/", organization: "Meta", displayName:"Llama 4 Maverick 17B 128E Instruct", openweight: true, huggingface: "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct"},
+    "llama4-maverick-instruct-basic": {url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/", organization: "Meta", displayName:"Llama 4 Maverick 17B 128E Instruct", openweight: true, huggingface: "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct"},
     "gpt-4.1-2025-04-14": {url: "https://openai.com/index/gpt-4-1/", organization: "OpenAI", displayName: "GPT-4.1", version: "2025-04-14"},
     "gpt-4.1-mini-2025-04-14": {url: "https://openai.com/index/gpt-4-1/", organization: "OpenAI", displayName: "GPT-4.1 Mini", version: "2025-04-14"},
     "gpt-4.1-nano-2025-04-14": {url: "https://openai.com/index/gpt-4-1/", organization: "OpenAI", displayName: "GPT-4.1 Nano", version: "2025-04-14"},
@@ -216,10 +216,10 @@ export const modelLinks = {
     },
     "gemini-2.5-flash-preview-04-17": {url: "https://blog.google/products/gemini/gemini-2-5-flash-preview/", organization: "Google", displayName: "Gemini 2.5 Flash Preview", version: "2025-04-17", reasoner: true},
     "qwen3-30b-a3b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 30B A3B", reasoner: true},
-    "qwen3-32b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 32B", reasoner: true, openweight: true},
-    "qwen3-14b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 14B", reasoner: true, openweight: true},
+    "qwen3-32b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 32B", reasoner: true, openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3-32B"},
+    "qwen3-14b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 14B", reasoner: true, openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3-14B"},
     "learnlm-2.0-flash-experimental": {url: "https://ai.google.dev/gemini-api/docs/learnlm", organization: "Google", displayName: "LearnLM 2.0 Flash Experimental"},
-    "qwen3-235b-a22b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 235B A22B Thinking", reasoner: true, openweight: true},
+    "qwen3-235b-a22b-thinking": {url: "https://qwenlm.github.io/blog/qwen3/", organization: "Alibaba", displayName: "Qwen 3 235B A22B Thinking", reasoner: true, openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3-235B-A22B"},
     "phi-4-reasoning-plus": {url: "https://huggingface.co/microsoft/Phi-4-reasoning-plus", organization: "Microsoft", displayName: "Phi-4 Reasoning Plus", reasoner: true, openweight: true},
     "mistral-medium-2505": {url: "https://mistral.ai/news/mistral-medium-3", organization: "Mistral AI", displayName: "Mistral Medium 3", version: "2025-05"},
     "gemini-2.5-flash-06-05-highthinking": {url: "https://deepmind.google/models/gemini/flash/", organization: "Google", displayName: "Gemini 2.5 Flash (Max Thinking)", version: "2025-06-05", reasoner: true},
@@ -235,34 +235,34 @@ export const modelLinks = {
     "o3-pro-2025-06-10-high": {url: "https://platform.openai.com/docs/models/o3-pro", organization: "OpenAI", displayName: "o3 Pro High", version: "2025-06-10", reasoner: true},
     "gemini-2.5-flash-lite-highthinking": {url: "https://deepmind.google/models/gemini/flash-lite/", organization: "Google", displayName: "Gemini 2.5 Flash Lite (Max Thinking)", version: "2025-06-17", reasoner: true},
     "gemini-2.5-flash-lite-preview-09-2025-highthinking": {url: "https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/", organization: "Google", displayName: "Gemini 2.5 Flash Lite (Max Thinking)", version: "2025-09-25", reasoner: true},
-    "gemma-3n-e2b-it": {url: "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/", organization: "Google", displayName: "Gemma 3n E2B IT", openweight: true},
-    "gemma-3n-e4b-it": {url: "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/", organization: "Google", displayName: "Gemma 3n E4B IT", openweight: true},
-    "gemma-4-31b-it": { url: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/", organization: "Google", displayName: "Gemma 4 31B", openweight: true, reasoner: true },
+    "gemma-3n-e2b-it": {url: "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/", organization: "Google", displayName: "Gemma 3n E2B IT", openweight: true, huggingface: "https://huggingface.co/google/gemma-3n-E2B-it"},
+    "gemma-3n-e4b-it": {url: "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/", organization: "Google", displayName: "Gemma 3n E4B IT", openweight: true, huggingface: "https://huggingface.co/google/gemma-3n-E4B-it"},
+    "gemma-4-31b-it": { url: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/", organization: "Google", displayName: "Gemma 4 31B", openweight: true, reasoner: true, huggingface: "https://huggingface.co/google/gemma-4-31B-it" },
     "grok-4-0709": {url: "https://docs.x.ai/docs/models/grok-4-0709", organization: "xAI", displayName: "Grok 4", reasoner: true, version: "2025-07-09"},
     "kimi-k2-instruct": {url: "https://huggingface.co/moonshotai/Kimi-K2-Instruct", organization: "Moonshot AI", displayName: "Kimi K2 Instruct", openweight: true},
     "qwen3-235b-a22b-instruct-2507": {url: "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507", organization: "Alibaba", displayName: "Qwen 3 235B A22B Instruct 2507", openweight: true},
-    "qwen3-coder-480b-a35b-instruct": {url: "https://qwenlm.github.io/blog/qwen3-coder/", organization: "Alibaba", displayName: "Qwen 3 Coder 480B A35B Instruct", openweight: true},
+    "qwen3-coder-480b-a35b-instruct": {url: "https://qwenlm.github.io/blog/qwen3-coder/", organization: "Alibaba", displayName: "Qwen 3 Coder 480B A35B Instruct", openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct"},
     "qwen3-235b-a22b-thinking-2507": {url: "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507", organization: "Alibaba", displayName: "Qwen 3 235B A22B Thinking 2507", reasoner: true, openweight: true},
-    "glm-4.5": {url: "https://z.ai/blog/glm-4.5", organization: "Z.AI", displayName: "GLM 4.5", reasoner: true, openweight: true},
-    "glm-4.6": {url: "https://z.ai/blog/glm-4.6", organization: "Z.AI", displayName: "GLM 4.6", reasoner: true, openweight: true},
-    "glm-4.7": {url: "https://z.ai/blog/glm-4.7", organization: "Z.AI", displayName: "GLM 4.7", reasoner: true, openweight: true},
-    "glm-5": {url: "https://z.ai/blog/glm-5", organization: "Z.AI", displayName: "GLM 5", reasoner: true, openweight: true},
-    "glm-5.1": {url: "https://z.ai/blog/glm-5.1", organization: "Z.AI", displayName: "GLM 5.1", reasoner: true, openweight: true},
-    "glm-5v-turbo": {url: "https://docs.z.ai/guides/vlm/glm-5v-turbo", organization: "Z.AI", displayName: "GLM 5V Turbo", reasoner: true, openweight: true},
-    "glm-4.5-air": {url: "https://z.ai/blog/glm-4.5", organization: "Z.AI", displayName: "GLM 4.5 Air", reasoner: true, openweight: true},
+    "glm-4.5": {url: "https://z.ai/blog/glm-4.5", organization: "Z.AI", displayName: "GLM 4.5", reasoner: true, openweight: true, huggingface: "https://huggingface.co/zai-org/GLM-4.5"},
+    "glm-4.6": {url: "https://z.ai/blog/glm-4.6", organization: "Z.AI", displayName: "GLM 4.6", reasoner: true, openweight: true, huggingface: "https://huggingface.co/zai-org/GLM-4.6"},
+    "glm-4.7": {url: "https://z.ai/blog/glm-4.7", organization: "Z.AI", displayName: "GLM 4.7", reasoner: true, openweight: true, huggingface: "https://huggingface.co/zai-org/GLM-4.7"},
+    "glm-5": {url: "https://z.ai/blog/glm-5", organization: "Z.AI", displayName: "GLM 5", reasoner: true, openweight: true, huggingface: "https://huggingface.co/zai-org/GLM-5"},
+    "glm-5.1": {url: "https://z.ai/blog/glm-5.1", organization: "Z.AI", displayName: "GLM 5.1", reasoner: true, openweight: true, huggingface: "https://huggingface.co/zai-org/GLM-5.1"},
+    "glm-5v-turbo": {url: "https://docs.z.ai/guides/vlm/glm-5v-turbo", organization: "Z.AI", displayName: "GLM 5V Turbo", reasoner: true},
+    "glm-4.5-air": {url: "https://z.ai/blog/glm-4.5", organization: "Z.AI", displayName: "GLM 4.5 Air", reasoner: true, openweight: true, huggingface: "https://huggingface.co/zai-org/GLM-4.5-Air"},
     "deepseek-v3.1": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.1", organization: "DeepSeek", displayName: "DeepSeek V3.1", version: "2025-08-20", openweight: true},
     "deepseek-v3.1-thinking": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.1", organization: "DeepSeek", displayName: "DeepSeek V3.1 Thinking", version: "2025-08-20", openweight: true, reasoner: true},
     "grok-code-fast-1-0825": {url: "https://docs.x.ai/docs/models/grok-code-fast-1", organization: "xAI", displayName: "Grok Code Fast", reasoner: true, version: "2025-08-26"},
     "sonoma-dusk-alpha": {url: "https://openrouter.ai/openrouter/sonoma-dusk-alpha", organization: "Stealth", displayName: "Sonoma Dusk Alpha", reasoner: true, version: "2025-09-06"},
     "sonoma-sky-alpha": {url: "https://openrouter.ai/openrouter/sonoma-sky-alpha", organization: "Stealth", displayName: "Sonoma Sky Alpha", reasoner: true, version: "2025-09-06"},
-    "qwen3-next-80b-a3b-instruct": {url: "https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list", organization: "Alibaba", displayName: "Qwen 3 Next 80B A3B Instruct", openweight: true},
-    "qwen3-next-80b-a3b-thinking": {url: "https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list", organization: "Alibaba", displayName: "Qwen 3 Next 80B A3B Thinking", reasoner: true, openweight: true},
+    "qwen3-next-80b-a3b-instruct": {url: "https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list", organization: "Alibaba", displayName: "Qwen 3 Next 80B A3B Instruct", openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"},
+    "qwen3-next-80b-a3b-thinking": {url: "https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list", organization: "Alibaba", displayName: "Qwen 3 Next 80B A3B Thinking", reasoner: true, openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking"},
     "grok-4-fast-non-reasoning": {url: "https://docs.x.ai/docs/models/grok-4-fast-non-reasoning", organization: "xAI", displayName: "Grok 4 Fast (Non-Reasoning)", reasoner: false, version: "2025-09-22"},
     "grok-4-fast-reasoning": {url: "https://docs.x.ai/docs/models/grok-4-fast-reasoning", organization: "xAI", displayName: "Grok 4 Fast", reasoner: true, version: "2025-09-22"},
     "deepseek-v3.1-terminus": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus", organization: "DeepSeek", displayName: "DeepSeek V3.1 Terminus", version: "2025-09-22", openweight: true},
     "deepseek-v3.1-terminus-thinking": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus", organization: "DeepSeek", displayName: "DeepSeek V3.1 Terminus Thinking", version: "2025-09-22", openweight: true, reasoner: true},
     "gpt-5-codex": {url: "https://platform.openai.com/docs/models/gpt-5-codex", organization: "OpenAI", displayName: "GPT-5 Codex", version: "2025-09-22", openweight: false, reasoner: true},
-    "qwen3-max-2025-09-23": {url: "https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list", organization: "Alibaba", displayName: "Qwen 3 Max", version: "2025-09-23", openweight: true},
+    "qwen3-max-2025-09-23": {url: "https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d&from=research.latest-advancements-list", organization: "Alibaba", displayName: "Qwen 3 Max", version: "2025-09-23"},
     "claude-sonnet-4-5-20250929": {url: "https://www.anthropic.com/news/claude-sonnet-4-5", organization: "Anthropic", displayName: "Claude Sonnet 4.5", version: "2025-09-29", reasoner: false},
     "claude-sonnet-4-5-20250929-thinking-64k": {url: "https://www.anthropic.com/news/claude-sonnet-4-5", organization: "Anthropic", displayName: "Claude Sonnet 4.5 Thinking", version: "2025-09-29", reasoner: true},
     "claude-haiku-4-5-20251001": {url: "https://www.anthropic.com/news/claude-haiku-4-5", organization: "Anthropic", displayName: "Claude Haiku 4.5", version: "2025-10-01", reasoner: false},
@@ -270,12 +270,12 @@ export const modelLinks = {
     "deepseek-v3.2-exp": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp", organization: "DeepSeek", displayName: "DeepSeek V3.2 Exp", version: "2025-10-17", openweight: true},
     "deepseek-v3.2-exp-thinking": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp", organization: "DeepSeek", displayName: "DeepSeek V3.2 Exp Thinking", version: "2025-10-17", openweight: true, reasoner: true},
     "minimax-m2": {url: "https://huggingface.co/MiniMaxAI/MiniMax-M2", organization: "Minimax", displayName: "Minimax M2", version: "2025-10-29", openweight: true, reasoner: true},
-    "minimax-m2.5": {url: "https://www.minimax.io/news/minimax-m25", organization: "Minimax", displayName: "Minimax M2.5", reasoner: true, openweight: true},
+    "minimax-m2.5": {url: "https://www.minimax.io/news/minimax-m25", organization: "Minimax", displayName: "Minimax M2.5", reasoner: true, openweight: true, huggingface: "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"},
     "kimi-k2-thinking": {url: "https://huggingface.co/moonshotai/Kimi-K2-Thinking", organization: "Moonshot AI", displayName: "Kimi K2 Thinking", version: "2025-11-08", openweight: true, reasoner: true},
-    "kimi-k2.5-thinking": {url: "https://www.kimi.com/blog/kimi-k2-5.html", organization: "Moonshot AI", displayName: "Kimi K2.5 Thinking",  openweight: true, reasoner: true},
-    "kimi-k2.6-thinking": {url: "https://www.kimi.com/blog/kimi-k2-6", organization: "Moonshot AI", displayName: "Kimi K2.6 Thinking",  openweight: true, reasoner: true},
-    "kimi-k3": {url: "https://www.kimi.com/blog/kimi-k3", organization: "Moonshot AI", displayName: "Kimi K3",  openweight: true, reasoner: true},
-    "smaug-agentic": {url: "https://huggingface.co/abacusai/Smaug-Agentic", organization: "Abacus.AI", displayName: "Smaug-Agentic", openweight: true, reasoner: true},
+    "kimi-k2.5-thinking": {url: "https://www.kimi.com/blog/kimi-k2-5.html", organization: "Moonshot AI", displayName: "Kimi K2.5 Thinking",  openweight: true, reasoner: true, huggingface: "https://huggingface.co/moonshotai/Kimi-K2.5"},
+    "kimi-k2.6-thinking": {url: "https://www.kimi.com/blog/kimi-k2-6", organization: "Moonshot AI", displayName: "Kimi K2.6 Thinking",  openweight: true, reasoner: true, huggingface: "https://huggingface.co/moonshotai/Kimi-K2.6"},
+    "kimi-k3": {url: "https://www.kimi.com/blog/kimi-k3", organization: "Moonshot AI", displayName: "Kimi K3",  openweight: true, reasoner: true, huggingface: "https://huggingface.co/moonshotai/Kimi-K3"},
+    "smaug-agentic": {organization: "Abacus.AI", displayName: "Smaug-Agentic", openweight: true, reasoner: true, huggingface: "https://huggingface.co/abacusai/Smaug-Agentic", finetune: { organization: "Abacus.AI", baseModel: "Kimi K3", baseOrganization: "Moonshot AI" }},
     "grok-4-fast-non-reasoning-2511": {url: "https://docs.x.ai/docs/models/grok-4-fast-non-reasoning", organization: "xAI", displayName: "Grok 4 Fast (Non-Reasoning)", reasoner: false, version: "2025-11-10"},
     "grok-4-fast-reasoning-2511": {url: "https://docs.x.ai/docs/models/grok-4-fast-reasoning", organization: "xAI", displayName: "Grok 4 Fast", reasoner: true, version: "2025-11-10"},
     "gpt-5.1-2025-11-13": {
@@ -357,8 +357,8 @@ export const modelLinks = {
     "deepseek-v3.2": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.2", organization: "DeepSeek", displayName: "DeepSeek V3.2", version: "2025-11-25", openweight: true},
     "deepseek-v3.2-speciale": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale", organization: "DeepSeek", displayName: "DeepSeek V3.2 Speciale", version: "2025-11-25", openweight: true, reasoner: true},
     "deepseek-v3.2-thinking": {url: "https://huggingface.co/deepseek-ai/DeepSeek-V3.2", organization: "DeepSeek", displayName: "DeepSeek V3.2 Thinking", version: "2025-11-25", openweight: true, reasoner: true},
-    "deepseek-v4-pro": {url: "https://api-docs.deepseek.com/news/news260424", organization: "DeepSeek", displayName: "DeepSeek V4 Pro", openweight: true, reasoner: true},
-    "deepseek-v4-flash": {url: "https://api-docs.deepseek.com/news/news260424", organization: "DeepSeek", displayName: "DeepSeek V4 Flash", openweight: true, reasoner: true},
+    "deepseek-v4-pro": {url: "https://api-docs.deepseek.com/news/news260424", organization: "DeepSeek", displayName: "DeepSeek V4 Pro", openweight: true, reasoner: true, huggingface: "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"},
+    "deepseek-v4-flash": {url: "https://api-docs.deepseek.com/news/news260424", organization: "DeepSeek", displayName: "DeepSeek V4 Flash", openweight: true, reasoner: true, huggingface: "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"},
     "gpt-5.1-codex-max": {
         url: "https://platform.openai.com/docs/models/gpt-5.1-codex-max",
         organization: "OpenAI",
@@ -370,8 +370,8 @@ export const modelLinks = {
             { rawName: "gpt-5.1-codex-max-xhigh", displayName: "GPT-5.1 Codex Max XHigh" }
         ]
     },
-    "devstral-2512": {url: "https://mistral.ai/news/devstral-2-vibe-cli", organization: "Mistral", displayName: "Devstral 2", version: "2025-12-08", openweight: true},
-    "glm-4.6v": {url: "https://z.ai/blog/glm-4.6v", organization: "Z.AI", displayName: "GLM 4.6V", version: "2025-12-08", openweight: true, reasoner: true},
+    "devstral-2512": {url: "https://mistral.ai/news/devstral-2-vibe-cli", organization: "Mistral", displayName: "Devstral 2", version: "2025-12-08", openweight: true, huggingface: "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512"},
+    "glm-4.6v": {url: "https://z.ai/blog/glm-4.6v", organization: "Z.AI", displayName: "GLM 4.6V", version: "2025-12-08", openweight: true, reasoner: true, huggingface: "https://huggingface.co/zai-org/GLM-4.6V"},
     "gpt-5.2-2025-12-11": {
         url: "https://openai.com/index/introducing-gpt-5-2/", organization: "OpenAI", displayName: "GPT-5.2", version: "2025-12-11", reasoner: true,
         variants: [
@@ -471,10 +471,10 @@ export const modelLinks = {
     "minimax-m3": {url: "https://www.minimax.io/blog/minimax-m3", organization: "Minimax", displayName: "Minimax M3", reasoner: true},
     "nemotron-3-ultra-550b-a55b": {url: "https://build.nvidia.com/nvidia/nemotron-3-ultra-550b-a55b", organization: "NVIDIA", displayName: "Nemotron 3 Ultra 550B A55B", reasoner: true},
     "qwen3.6-plus": {url: "https://qwen.ai/blog?id=qwen3.6/", organization: "Alibaba", displayName: "Qwen 3.6 Plus", version: "2026-04-02", reasoner: true},
-    "qwen3.6-27b": {url: "https://qwen.ai/blog?id=qwen3.6-27b", organization: "Alibaba", displayName: "Qwen 3.6 27B", reasoner: true, openweight: true},
-    "qwen3.6-flash": {url: "https://openrouter.ai/qwen/qwen3.6-flash/", organization: "Alibaba", displayName: "Qwen 3.6 Flash", reasoner: true, openweight: true},
+    "qwen3.6-27b": {url: "https://qwen.ai/blog?id=qwen3.6-27b", organization: "Alibaba", displayName: "Qwen 3.6 27B", reasoner: true, openweight: true, huggingface: "https://huggingface.co/Qwen/Qwen3.6-27B"},
+    "qwen3.6-flash": {url: "https://openrouter.ai/qwen/qwen3.6-flash/", organization: "Alibaba", displayName: "Qwen 3.6 Flash", reasoner: true},
     "qwen3.7-max": {url: "https://qwen.ai/blog?id=qwen3.7", organization: "Alibaba", displayName: "Qwen 3.7 Max", reasoner: true},
-    "nemotron-3-super-120b-a12b": {url: "https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free", organization: "NVIDIA", displayName: "Nemotron 3 Super 120B A12B", version: "2026-03-11", reasoner: true, openweight: true},
+    "nemotron-3-super-120b-a12b": {url: "https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free", organization: "NVIDIA", displayName: "Nemotron 3 Super 120B A12B", version: "2026-03-11", reasoner: true, openweight: true, huggingface: "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"},
     "elephant-alpha": {url: "https://openrouter.ai/openrouter/elephant-alpha", organization: "OpenRouter", displayName: "Elephant Alpha", reasoner: true},
     "claude-opus-4-7-high-effort": {
         url: "https://www.anthropic.com/news/claude-opus-4-7",
@@ -580,7 +580,8 @@ export const modelLinks = {
         organization: "DeepSeek",
         displayName: "DeepSeek V4 Flash 0731",
         openweight: true,
-        reasoner: true
+        reasoner: true,
+        huggingface: "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
     },
     "qwen3.8-max": {
         url: "https://qwen.ai/blog?id=qwen3.8",
@@ -622,6 +623,16 @@ export const getVariantGroup = (modelName) => {
         return { baseName: variantEntry.baseName, members: variantGroups[variantEntry.baseName] };
     }
     return null;
+};
+
+// Resolve the Hugging Face link for an open-weight model: explicit `huggingface`
+// field first, then the main url if it already points at huggingface.co, then a
+// HF search as a last resort so every open-weight model gets a working link.
+export const getHuggingFaceUrl = (info) => {
+    if (!info?.openweight) return null;
+    if (info.huggingface) return info.huggingface;
+    if (info.url && info.url.includes("huggingface.co")) return info.url;
+    return `https://huggingface.co/models?search=${encodeURIComponent(info.rawName ?? info.displayName ?? '')}`;
 };
 
 export const getModelInfo = (modelName) => {

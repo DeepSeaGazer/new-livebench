@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { catFull, subtaskLabel } from "../lib/constants";
 import { collapseVariants, costForCategories } from "../lib/compute";
+import { getHuggingFaceUrl } from "../Table/modelLinks";
 
 // Render $X with the "$" in a .cur span (size-only nudge — see index.css).
 const Money = ({ v, dp }) => (v == null ? "—" : <><span className="cur">$</span>{v.toFixed(dp)}</>);
@@ -211,6 +212,18 @@ export default function Leaderboard({ models, categories, hasCost }) {
                     <tr className="lb-detail">
                       <td colSpan={colCount}>
                         <div className="lb-detail-in">
+                          <div className="lb-det-meta">
+                            {m.info.finetune ? (
+                              <>
+                                <span><span className="k">Finetune from:</span>{m.info.finetune.organization}</span>
+                                <span><span className="k">Base model:</span>{m.info.finetune.baseModel} (from {m.info.finetune.baseOrganization})</span>
+                              </>
+                            ) : (
+                              <span><span className="k">From:</span>{m.info.organization ?? "—"}</span>
+                            )}
+                            {m.info.version && <span><span className="k">Version:</span>{m.info.version}</span>}
+                            {getHuggingFaceUrl(m.info) && <a href={getHuggingFaceUrl(m.info)} target="_blank" rel="noopener noreferrer">Hugging Face ↗</a>}
+                          </div>
                           <div className="lb-det-grid">
                             {(selectedCats.length ? selectedCats : cats).map((c) => (
                               <div className="lb-det-cat" key={c}>
